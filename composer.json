@@ -1,0 +1,35 @@
+{
+    "name": "outsideopen/kad-alerts",
+    "description": "Alert OO on slack to systems needing a reboot",
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "outsideopen/kaseya-api-client",
+                "version": "1.0",
+                "source": {
+                    "url": "https://github.com/outsideopen/kaseya-api-php-client",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "require": {
+                    "php": ">=5.4",
+                    "monolog/monolog": "^1.17",
+                    "phpseclib/phpseclib": "~0.3.10|~2.0",
+                    "guzzlehttp/guzzle": "~5.3.1|~6.0",
+                    "guzzlehttp/psr7": "^1.2"
+                },
+                "autoload" : {
+                    "psr-4" : {
+                        "Kaseya\\" : "src"
+                    }
+                }
+            }
+        }
+    ],
+    "require": {
+        "josegonzalez/dotenv": "^3.2",
+        "outsideopen/kaseya-api-client": "^1",
+        "maknz/slack": "^1.7"
+    }
+}
